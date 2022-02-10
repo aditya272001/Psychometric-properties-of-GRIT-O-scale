@@ -30,17 +30,23 @@ Two_fac_GRIT <- 'Consistency =~ GS2 + GS3 + GS5 + GS7 + GS8 + GS11
 
 Two_fac_GRIT_FIT <- cfa(Two_fac_GRIT, std.lv = T, data = GRIT, estimator = "WLSMV")
 
-- Picture 
+![Screenshot 2022-02-10 103009](https://user-images.githubusercontent.com/96023170/153365025-e689a28c-07f3-47c4-8bcd-03364dd6d4f5.png)
+
+![Screenshot 2022-02-10 103030](https://user-images.githubusercontent.com/96023170/153365320-2137a59c-4541-41b6-99c2-3cb30d15b927.png)
 
 lavTestLRT(fit.Configural.GRIT, fit.Metric.GRIT, fit.Scalar.GRIT, fit.Residual.GRIT)
+ ![Screenshot 2022-02-10 103053](https://user-images.githubusercontent.com/96023170/153365657-c96e1ef1-e51e-4671-b87e-042e4a6aebde.png)
 
-- Picture 
 
 lavTestLRT(fit.Configural.GRIT, fit.Metric.GRIT, fit.Scalar.GRIT, fit.Scalar.GRIT.2)
+![Screenshot 2022-02-10 122442](https://user-images.githubusercontent.com/96023170/153365682-7f41be97-dfde-48ad-ba11-273e6435a5e5.png)
 
-#------Plotting------#
+-Plotting------#
 semPaths(Two_fac_GRIT_FIT, whatLabels = "std", edge.label.cex = 0.5, layout = "tree",
          sizeMan = 5, style = "mx")
+![Screenshot 2022-02-10 134805](https://user-images.githubusercontent.com/96023170/153365917-2b8a89bb-92f0-4be2-9c2b-32f97e3c19c5.png)
+
+
 ## References
 
  Duckworth, A. L., & Quinn, P. D. (2009). Development and validation of the Short Grit Scale (GRIT–S). Journal of personality assessment, 91(2), 166-174.
